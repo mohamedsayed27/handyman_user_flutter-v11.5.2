@@ -278,6 +278,7 @@ Future<void> getAppConfigurations({bool isCurrentLocation = false, double? lat, 
     log('App Configurations was  synced recently');
   } else {
     log("entered else state");
+
     try {
 
       log("entered try state");
