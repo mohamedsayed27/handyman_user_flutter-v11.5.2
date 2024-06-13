@@ -275,7 +275,7 @@ Future<void> getAppConfigurations({bool isCurrentLocation = false, double? lat, 
 
   log("enter app config");
   if (lastSyncedTimeStamp.isAfter(currentTimeStamp)) {
-    log('App Configurations was synced recently');
+    log('App Configurations was  synced recently');
   } else {
     log("entered else state");
     try {
