@@ -12,11 +12,7 @@ import 'package:http/http.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 Map<String, String> buildHeaderTokens() {
-  Map<String, String> header = {
-    'User-Agent': 'Chrome/58.0.3029.110',
-    'Accept-Language': 'en-US,en;q=0.9',
-    'Referer': 'https://btweeq.com',
-  };
+  Map<String, String> header = {};
 
   if (appStore.isLoggedIn) header.putIfAbsent(HttpHeaders.authorizationHeader, () => 'Bearer ${appStore.token}');
   header.putIfAbsent(HttpHeaders.contentTypeHeader, () => 'application/json; charset=utf-8');
@@ -51,6 +47,7 @@ Future<Response> buildHttpResponse(
     if (method == HttpMethodType.POST) {
       log('Request: ${jsonEncode(request)}');
       response = await http.post(url, body: jsonEncode(request), headers: headers);
+      log(response);
     } else if (method == HttpMethodType.DELETE) {
       response = await delete(url, headers: headers);
     } else if (method == HttpMethodType.PUT) {

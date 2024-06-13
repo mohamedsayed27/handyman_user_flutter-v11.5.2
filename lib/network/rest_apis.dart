@@ -273,14 +273,22 @@ Future<void> getAppConfigurations({bool isCurrentLocation = false, double? lat, 
   DateTime lastSyncedTimeStamp = DateTime.fromMillisecondsSinceEpoch(getIntAsync(LAST_APP_CONFIGURATION_SYNCED_TIME));
   lastSyncedTimeStamp = lastSyncedTimeStamp.add(Duration(minutes: 5));
 
+  log("enter app config");
   if (lastSyncedTimeStamp.isAfter(currentTimeStamp)) {
     log('App Configurations was synced recently');
   } else {
+    log("entered else state");
     try {
+
+      log("entered try state");
       AppConfigurationModel? res = AppConfigurationModel.fromJsonMap(await handleResponse(await buildHttpResponse('configurations?is_authenticated=${appStore.isLoggedIn.getIntBool()}', method: HttpMethodType.POST)));
 
+      log("print res");
+      log("res");
+      log(res);
       await setAppConfigurations(res);
     } catch (e) {
+      log(e);
       throw e;
     }
   }

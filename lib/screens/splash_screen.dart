@@ -34,7 +34,9 @@ class _SplashScreenState extends State<SplashScreen> {
     await appStore.setLanguage(getStringAsync(SELECTED_LANGUAGE_CODE, defaultValue: DEFAULT_LANGUAGE));
 
     ///Set app configurations
-    await getAppConfigurations().then((value) {}).catchError((e) async {
+    await getAppConfigurations().then((value) {
+
+    }).catchError((e) async {
       if (!await isNetworkAvailable()) {
         toast(errorInternetNotAvailable);
       }
