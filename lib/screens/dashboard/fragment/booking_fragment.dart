@@ -59,8 +59,12 @@ class _BookingFragmentState extends State<BookingFragment> {
     future = getBookingList(page, status: status, bookings: bookings, lastPageCallback: (b) {
       isLastPage = b;
     });
+    list = await future;
+    print("Future List");
+    print(list);
   }
 
+  List<BookingData>? list ;
   @override
   void setState(fn) {
     if (mounted) super.setState(fn);
@@ -127,6 +131,7 @@ class _BookingFragmentState extends State<BookingFragment> {
               initialData: cachedBookingList,
               future: future,
               errorBuilder: (error) {
+                print(error);
                 return NoDataWidget(
                   title: error,
                   imageWidget: ErrorStateWidget(),
@@ -142,6 +147,8 @@ class _BookingFragmentState extends State<BookingFragment> {
               },
               loadingWidget: BookingShimmer(),
               onSuccess: (list) {
+                print("App list");
+                print(list);
                 return AnimatedListView(
                   key: keyForList,
                   controller: scrollController,

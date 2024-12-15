@@ -131,6 +131,8 @@ class _ConfirmBookingDialogState extends State<ConfirmBookingDialog> {
         );
       }
     }).catchError((e) {
+      print("Booking save error");
+      print(e);
       appStore.setLoading(false);
       toast(e.toString(), print: true);
     });

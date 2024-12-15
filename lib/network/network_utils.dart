@@ -12,7 +12,9 @@ import 'package:http/http.dart';
 import 'package:nb_utils/nb_utils.dart';
 
 Map<String, String> buildHeaderTokens() {
-  Map<String, String> header = {};
+  Map<String, String> header = {
+    'User-Agent': 'Chrome/96.0.4664.110',
+  };
 
   if (appStore.isLoggedIn) header.putIfAbsent(HttpHeaders.authorizationHeader, () => 'Bearer ${appStore.token}');
   header.putIfAbsent(HttpHeaders.contentTypeHeader, () => 'application/json; charset=utf-8');

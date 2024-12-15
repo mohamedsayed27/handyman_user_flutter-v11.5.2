@@ -21,6 +21,7 @@ abstract class BaseService {
       return doc;
     }).catchError((e) {
       log(e);
+      print(e);
       throw e;
     });
   }

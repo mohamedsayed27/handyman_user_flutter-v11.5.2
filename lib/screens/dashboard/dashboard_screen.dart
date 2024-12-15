@@ -137,7 +137,7 @@ class _DashboardScreenState extends State<DashboardScreen> {
             DashboardFragment(),
             Observer(builder: (context) => appStore.isLoggedIn ? BookingFragment() : SignInScreen(isFromDashboard: true)),
             CategoryScreen(),
-            Observer(builder: (context) => appStore.isLoggedIn ? ChatListScreen() : SignInScreen(isFromDashboard: true)),
+            // Observer(builder: (context) => appStore.isLoggedIn ? ChatListScreen() : SignInScreen(isFromDashboard: true)),
             ProfileFragment(),
           ][currentIndex],
         ),
@@ -170,11 +170,11 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   selectedIcon: ic_category.iconImage(color: context.primaryColor),
                   label: language.category,
                 ),
-                NavigationDestination(
-                  icon: ic_chat.iconImage(color: appTextSecondaryColor),
-                  selectedIcon: ic_chat.iconImage(color: context.primaryColor),
-                  label: language.lblChat,
-                ),
+                // NavigationDestination(
+                //   icon: ic_chat.iconImage(color: appTextSecondaryColor),
+                //   selectedIcon: ic_chat.iconImage(color: context.primaryColor),
+                //   label: language.lblChat,
+                // ),
                 Observer(builder: (context) {
                   return NavigationDestination(
                     icon: (appStore.isLoggedIn && appStore.userProfileImage.isNotEmpty)

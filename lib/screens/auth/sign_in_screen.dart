@@ -300,75 +300,75 @@ class _SignInScreenState extends State<SignInScreen> {
               ],
             ),
           24.height,
-          if (appConfigurationStore.googleLoginStatus)
-            AppButton(
-              text: '',
-              color: context.cardColor,
-              padding: EdgeInsets.all(8),
-              textStyle: boldTextStyle(),
-              width: context.width() - context.navigationBarHeight,
-              child: Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(12),
-                    decoration: boxDecorationWithRoundedCorners(
-                      backgroundColor: primaryColor.withOpacity(0.1),
-                      boxShape: BoxShape.circle,
-                    ),
-                    child: GoogleLogoWidget(size: 16),
-                  ),
-                  Text(language.lblSignInWithGoogle, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
-                ],
-              ),
-              onTap: googleSignIn,
-            ),
-          if (appConfigurationStore.googleLoginStatus) 16.height,
-          if (appConfigurationStore.otpLoginStatus)
-            AppButton(
-              text: '',
-              color: context.cardColor,
-              padding: EdgeInsets.all(8),
-              textStyle: boldTextStyle(),
-              width: context.width() - context.navigationBarHeight,
-              child: Row(
-                children: [
-                  Container(
-                    padding: EdgeInsets.all(8),
-                    decoration: boxDecorationWithRoundedCorners(
-                      backgroundColor: primaryColor.withOpacity(0.1),
-                      boxShape: BoxShape.circle,
-                    ),
-                    child: ic_calling.iconImage(size: 18, color: primaryColor).paddingAll(4),
-                  ),
-                  Text(language.lblSignInWithOTP, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
-                ],
-              ),
-              onTap: otpSignIn,
-            ),
-          if (appConfigurationStore.otpLoginStatus) 16.height,
-          if (isIOS)
-            if (appConfigurationStore.appleLoginStatus)
-              AppButton(
-                text: '',
-                color: context.cardColor,
-                padding: EdgeInsets.all(8),
-                textStyle: boldTextStyle(),
-                width: context.width() - context.navigationBarHeight,
-                child: Row(
-                  children: [
-                    Container(
-                      padding: EdgeInsets.all(8),
-                      decoration: boxDecorationWithRoundedCorners(
-                        backgroundColor: primaryColor.withOpacity(0.1),
-                        boxShape: BoxShape.circle,
-                      ),
-                      child: Icon(Icons.apple),
-                    ),
-                    Text(language.lblSignInWithApple, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
-                  ],
-                ),
-                onTap: appleSign,
-              ),
+          // if (appConfigurationStore.googleLoginStatus)
+          //   AppButton(
+          //     text: '',
+          //     color: context.cardColor,
+          //     padding: EdgeInsets.all(8),
+          //     textStyle: boldTextStyle(),
+          //     width: context.width() - context.navigationBarHeight,
+          //     child: Row(
+          //       children: [
+          //         Container(
+          //           padding: EdgeInsets.all(12),
+          //           decoration: boxDecorationWithRoundedCorners(
+          //             backgroundColor: primaryColor.withOpacity(0.1),
+          //             boxShape: BoxShape.circle,
+          //           ),
+          //           child: GoogleLogoWidget(size: 16),
+          //         ),
+          //         Text(language.lblSignInWithGoogle, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
+          //       ],
+          //     ),
+          //     onTap: googleSignIn,
+          //   ),
+          // if (appConfigurationStore.googleLoginStatus) 16.height,
+          // if (appConfigurationStore.otpLoginStatus)
+          //   AppButton(
+          //     text: '',
+          //     color: context.cardColor,
+          //     padding: EdgeInsets.all(8),
+          //     textStyle: boldTextStyle(),
+          //     width: context.width() - context.navigationBarHeight,
+          //     child: Row(
+          //       children: [
+          //         Container(
+          //           padding: EdgeInsets.all(8),
+          //           decoration: boxDecorationWithRoundedCorners(
+          //             backgroundColor: primaryColor.withOpacity(0.1),
+          //             boxShape: BoxShape.circle,
+          //           ),
+          //           child: ic_calling.iconImage(size: 18, color: primaryColor).paddingAll(4),
+          //         ),
+          //         Text(language.lblSignInWithOTP, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
+          //       ],
+          //     ),
+          //     onTap: otpSignIn,
+          //   ),
+          // if (appConfigurationStore.otpLoginStatus) 16.height,
+          // if (isIOS)
+          //   if (appConfigurationStore.appleLoginStatus)
+          //     AppButton(
+          //       text: '',
+          //       color: context.cardColor,
+          //       padding: EdgeInsets.all(8),
+          //       textStyle: boldTextStyle(),
+          //       width: context.width() - context.navigationBarHeight,
+          //       child: Row(
+          //         children: [
+          //           Container(
+          //             padding: EdgeInsets.all(8),
+          //             decoration: boxDecorationWithRoundedCorners(
+          //               backgroundColor: primaryColor.withOpacity(0.1),
+          //               boxShape: BoxShape.circle,
+          //             ),
+          //             child: Icon(Icons.apple),
+          //           ),
+          //           Text(language.lblSignInWithApple, style: boldTextStyle(size: 12), textAlign: TextAlign.center).expand(),
+          //         ],
+          //       ),
+          //       onTap: appleSign,
+          //     ),
         ],
       );
     } else {
@@ -447,7 +447,7 @@ class _SignInScreenState extends State<SignInScreen> {
                     ),
                   ),
                   _buildRememberWidget(),
-                  if (!getBoolAsync(HAS_IN_REVIEW)) _buildSocialWidget(),
+                  // if (!getBoolAsync(HAS_IN_REVIEW)) _buildSocialWidget(),
                   30.height,
                 ],
               );

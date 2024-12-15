@@ -1,40 +1,21 @@
 {
   "project_info": {
-    "project_number": "592249695161",
-    "project_id": "hanyman-2f40e",
-    "storage_bucket": "hanyman-2f40e.appspot.com"
+    "project_number": "1042897986964",
+    "project_id": "btweeq",
+    "storage_bucket": "btweeq.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:592249695161:android:a19b5b8df27cef2ba0a468",
+        "mobilesdk_app_id": "1:1042897986964:android:9a50af5d8312115ad19b81",
         "android_client_info": {
-          "package_name": "com.iqonic.servicebooking"
+          "package_name": "com.ocoda.btweeqUser"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBX-GYpXsBxU6AxXHECpzBYFsCdqfCt9d8"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": []
-        }
-      }
-    },
-    {
-      "client_info": {
-        "mobilesdk_app_id": "1:592249695161:android:cf5163b336945565a0a468",
-        "android_client_info": {
-          "package_name": "com.ocoda.handyMan"
-        }
-      },
-      "oauth_client": [],
-      "api_key": [
-        {
-          "current_key": "AIzaSyBX-GYpXsBxU6AxXHECpzBYFsCdqfCt9d8"
+          "current_key": "AIzaSyAquZg4A0-Tztce7QfFGlqz9SV0u-qSH9Y"
         }
       ],
       "services": {

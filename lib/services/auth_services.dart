@@ -39,7 +39,8 @@ class AuthService {
   Future<void> verifyFirebaseUser() async {
     try {
       UserCredential userCredential = await getFirebaseUser();
-
+      print("Firebase userCredential");
+      print(userCredential);
       UserData userData = UserData();
       userData.id = appStore.userId;
       userData.email = appStore.userEmail;
@@ -57,6 +58,7 @@ class AuthService {
       userData.uid = userCredential.user!.uid;
 
       bool isUserExistWithUid = await userService.isUserExistWithUid(userCredential.user!.uid);
+
 
       if (!isUserExistWithUid) {
         userData.createdAt = Timestamp.now().toDate().toString();

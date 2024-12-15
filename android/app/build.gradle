@@ -3,6 +3,7 @@ plugins {
     id "kotlin-android"
     id "dev.flutter.flutter-gradle-plugin"
     id "com.google.gms.google-services"
+    id 'com.google.firebase.crashlytics'
 }
 
 def localProperties = new Properties()
@@ -30,7 +31,7 @@ if (flutterVersionName == null) {
 }
 
 android {
-    namespace "com.ocoda.handyMan"
+    namespace "com.ocoda.btweeqUser"
     compileSdkVersion 34
     ndkVersion "25.1.8937393"
 
@@ -48,11 +49,11 @@ android {
     }
 
     defaultConfig {
-        applicationId 'com.ocoda.handyMan'
+        applicationId 'com.ocoda.btweeqUser'
         minSdkVersion 25
         targetSdkVersion 34
-        versionCode 84
-        versionName '11.5.2'
+        versionCode 86
+        versionName '11.5.3'
     }
 
     signingConfigs {
@@ -93,3 +94,4 @@ dependencies {
     implementation 'phonepe.intentsdk.android.release:IntentSDK:2.3.0'
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
 }
+

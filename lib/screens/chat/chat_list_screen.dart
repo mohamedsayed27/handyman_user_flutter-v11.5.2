@@ -39,6 +39,8 @@ class _ChatListScreenState extends State<ChatListScreen> {
     return AppScaffold(
       appBarTitle: language.lblChat,
       child: Observer(builder: (context) {
+        print(FirebaseAuth.instance.currentUser);
+        print(appStore.uid.isNotEmpty);
         return SnapHelperWidget(
           future: Future.value(FirebaseAuth.instance.currentUser != null && appStore.uid.isNotEmpty),
           onSuccess: (isLoggedIn) {

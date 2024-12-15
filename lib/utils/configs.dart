@@ -1,9 +1,10 @@
 import 'package:country_picker/country_picker.dart';
 import 'package:flutter/material.dart';
 
-const APP_NAME = 'Handyman Service';
-const APP_NAME_TAG_LINE = 'On-Demand Home Services App';
-var defaultPrimaryColor = Color(0xFF5F60B9);
+const APP_NAME = 'جمعية الخدمات الفنية و الصيانة التعاونية';
+const APP_SUB_NAME = 'لا تشيل هم الصيانة و شباب طويق هنا';
+const APP_NAME_TAG_LINE = 'تطبيق الخدمات المنزلية عند الطلب';
+var defaultPrimaryColor = Color(0xffED9636);
 
 // Don't add slash at the end of the url
 const DOMAIN_URL = 'https://btweeq.com'; // Don't add slash at the end of the url

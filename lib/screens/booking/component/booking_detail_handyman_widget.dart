@@ -99,31 +99,31 @@ class BookingDetailHandymanWidgetState extends State<BookingDetailHandymanWidget
                     launchCall(widget.handymanData.contactNumber.validate());
                   },
                 ).expand(),
-              16.width,
-              AppButton(
-                child: Row(
-                  mainAxisSize: MainAxisSize.min,
-                  children: [
-                    ic_chat.iconImage(size: 18),
-                    8.width,
-                    Text(language.lblChat, style: boldTextStyle()),
-                  ],
-                ).fit(),
-                width: context.width(),
-                elevation: 0,
-                color: context.scaffoldBackgroundColor,
-                onTap: () async {
-                  toast(language.pleaseWaitWhileWeLoadChatDetails);
-                  UserData? user = await userService.getUserNull(email: widget.handymanData.email.validate());
-                  if (user != null) {
-                    Fluttertoast.cancel();
-                    UserChatScreen(receiverUser: user).launch(context);
-                  } else {
-                    Fluttertoast.cancel();
-                    toast("${widget.handymanData.firstName} ${language.isNotAvailableForChat}");
-                  }
-                },
-              ).expand(),
+              // 16.width,
+              // AppButton(
+              //   child: Row(
+              //     mainAxisSize: MainAxisSize.min,
+              //     children: [
+              //       ic_chat.iconImage(size: 18),
+              //       8.width,
+              //       Text(language.lblChat, style: boldTextStyle()),
+              //     ],
+              //   ).fit(),
+              //   width: context.width(),
+              //   elevation: 0,
+              //   color: context.scaffoldBackgroundColor,
+              //   onTap: () async {
+              //     toast(language.pleaseWaitWhileWeLoadChatDetails);
+              //     UserData? user = await userService.getUserNull(email: widget.handymanData.email.validate());
+              //     if (user != null) {
+              //       Fluttertoast.cancel();
+              //       UserChatScreen(receiverUser: user).launch(context);
+              //     } else {
+              //       Fluttertoast.cancel();
+              //       toast("${widget.handymanData.firstName} ${language.isNotAvailableForChat}");
+              //     }
+              //   },
+              // ).expand(),
               16.width,
               AppButton(
                 child: Image.asset(ic_whatsapp, height: 18),

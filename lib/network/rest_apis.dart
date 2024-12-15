@@ -580,7 +580,7 @@ Future<List<BookingData>> getBookingList(int page, {var perPage = PER_PAGE_ITEM,
   } catch (e) {
     appStore.setLoading(false);
 
-    throw e;
+    rethrow ;
   }
 }
 
@@ -616,9 +616,10 @@ Future<BaseResponseModel> updateBooking(Map request) async {
 
 Future<BookingDetailResponse> saveBooking(Map request) async {
   var res = await handleResponse(await buildHttpResponse('booking-save', request: request, method: HttpMethodType.POST));
-
+  print("save booking response");
+  print(res);
   return await getBookingDetail({
-    CommonKeys.bookingId: res[CommonKeys.bookingId],
+    CommonKeys.bookingId: res["booking"]["id"],
     CommonKeys.customerId: appStore.userId,
   });
 }

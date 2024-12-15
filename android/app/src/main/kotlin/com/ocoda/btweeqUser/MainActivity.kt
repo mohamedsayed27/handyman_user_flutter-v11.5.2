@@ -1,4 +1,4 @@
-package com.ocoda.handyMan
+package com.ocoda.btweeqUser
 
 import io.flutter.embedding.android.FlutterActivity
 import io.flutter.embedding.android.FlutterFragmentActivity
